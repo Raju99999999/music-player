@@ -1,9 +1,14 @@
-body {
-	background-color: rgb(9, 9, 41);
+*
+{
+	box-sizing: border-box;
 	margin: 0px;
 	font-family: "Segoe UI", Arial, sans-serif;
+
+}
+body {
+	background-color: rgb(9, 9, 41);
 	color: white;
-    box-sizing: border-box;
+
 }
 
 /* top navigation bar */
@@ -17,39 +22,44 @@ body {
 /*style logo */
 .website-logo img
 {
-	width: 170px;
-	height: 72px;
-	margin-left: 60px;
-	margin-top: 10px;	
+	width: 150px;
+	height: 60px;
+	margin-left: 25px;
+	margin-top: 2px;	
 	
 }
 
 /* Style Search bar */
 .search-bar
 {
-	width: 20%;
+	width: 25%;
 	position: relative;
+	margin-left: 300px;
 
 }
 .search-bar input
 {
 	width: 100%;
-	font-size: 16px;
+	font-size: 20px;
 	text-decoration: none;
-	border-radius: 18px;
+	border-radius: 10px;
 	border: none;
 	padding: 5px;
 	font-weight: 500;
 	text-align: center;
+	height: 35px;
+	background-color: rgb(29, 29, 80);
 }
 
 /* search icon for input bar */
 .search-ico {
-	color: rgba(0, 0, 0, 0.5);
+	color:white;
+	font-size: 18px;
 }
 /* mic icon for input */
 .mic-ico {
-	color: rgba(0, 0, 0, 0.5);
+	color: white;
+	font-size: 18px;
 }
 
 /* search icon */
@@ -58,36 +68,323 @@ body {
 	position: absolute;
 	width: min-content;
 	left: 5%;
-	top: 10%;
+	top: 20%;
 }
 /* mic icon */
 .search-bar > div:nth-child(3) {
 	display: inline-block;
 	position: absolute;
 	width: min-content;
-	right: 0%;
-	top: 10%;
+	right: 5%;
+	top: 20%;
 	
 }
 /* when the user clicks on the search bar, there should be no blue outlining */
 input:focus {
 	outline: none;
 }
+/* profile picture style */
 .profile-picture img
 {
-	width: 45px;
+	width: 55px;
 	height: 45px;
 	border-radius: 100%;
-	margin-right: 80px;
+	margin-right: 20px;
+	margin-top: 4px;
 }
+/*style the notification bell imge */
 .notification-bell img {
-	width: 40px;
-	height: 30px;
-	animation-name: ringing_bell;
-	animation-duration: 0.4s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	animation-delay: 10s;
+	width: 24px;
+	height: 23px;
 	position: first;
+}
+/* section  */
+section
+{ 
+	width: 100%;
+}
+/* there are two aside sections both of them will have this class 
+(I have taken care of the re-usability of the classes and removed redundancy) */
 
-/* all the divs inside the navigation bar should be placed side by side*/
+
+/* carousel */
+
+.carousel{
+	width: 60%;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+	display: flex;
+	float: left;
+	padding-left: 30px;
+	
+}
+/* css of the 3d carousel */
+
+#slider {
+float: left;
+position: static;
+min-width: 55%;
+height: 35vh;
+margin: 0px 150px;
+perspective: 1400px;
+transform-style: preserve-3d;
+display: flex;
+}
+
+#slider label,
+#slider label img {
+position: absolute;
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: transform 400ms ease;
+
+}
+
+input[type=radio] {
+position: relative;
+top: 108%;
+left: 50%;
+width: 18px;
+height: 18px;
+margin: 0 15px 0 0;
+opacity: 0.4;
+transform: translateX(-83px);
+cursor: pointer;
+display: none;
+}
+
+
+input[type=radio]:nth-child(5) {
+margin-right: 0px;
+}
+
+input[type=radio]:checked {
+opacity: 1;
+}
+
+
+#s1:checked ~ #slide1,
+#s2:checked ~ #slide2,
+#s3:checked ~ #slide3,
+#s4:checked ~ #slide4,
+ #s5:checked ~ #slide5 {
+box-shadow: 0 13px 26px rgba(0,0,0, 0.3), 0 12px 6px rgba(0,0,0, 0.2);
+transform: translate3d(0%, 0, 0px);
+}
+
+#s1:checked ~ #slide2,
+#s2:checked ~ #slide3,
+#s3:checked ~ #slide4,
+#s4:checked ~ #slide5,
+ #s5:checked ~ #slide1 {
+box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+transform: translate3d(20%, 0, -50px);
+}
+
+#s1:checked ~ #slide3,
+#s2:checked ~ #slide4,
+#s3:checked ~ #slide5,
+#s4:checked ~ #slide1,
+ #s5:checked ~ #slide2 {
+box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+transform: translate3d(40%, 0, -250px);
+}
+
+#s1:checked ~ #slide5,
+#s2:checked ~ #slide1,
+#s3:checked ~ #slide2,
+#s4:checked ~ #slide3,
+ #s5:checked ~ #slide4 {
+box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+transform: translate3d(-42%, 0, -250px);
+}
+
+#s1:checked ~ #slide4,
+#s2:checked ~ #slide5,
+#s3:checked ~ #slide1,
+#s4:checked ~ #slide2,
+ #s5:checked ~ #slide3 {
+box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+transform: translate3d(-25%, 0, -100px);
+}
+
+/* styel the aside */
+aside
+{
+	float: right;
+	width: 40%;
+	margin-top: 20px;
+	
+}
+/* style Queue*/
+/* queue */
+
+.queue-container {
+    width: 95%;
+    margin-bottom: 2rem;
+}
+
+#queue-2 {
+    display: none;
+}
+
+.queue-header {
+    color: #CECFD3;
+    font-size: 1.1rem;
+    font-weight: 700;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* implementing the dropdown(on queue button click) via checbox */
+
+
+/* hide the checkbox */
+
+.queue-header input {
+    display: none;
+}
+
+.queue-header label {
+    font-size: 0.8rem;
+    color: #51E2C2;
+}
+
+.queue-btn-container {
+    position: relative;
+}
+
+
+/* set position of dropdown absolute to the label to appear over other elements , set height 0 and overflow hidden add transition effect */
+
+.queue-btn-dropdown {
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    top: 1.5rem;
+    left: -4rem;
+    background-color: white;
+    text-align: center;
+    transition: all 0.2s linear;
+}
+
+.queue-btn-dropdown a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: black;
+}
+
+
+/* on clicking the label dropdown will appear, make height non zero */
+
+#mycheckbox:checked~div {
+    height: 4.7rem;
+    padding: 0.3rem;
+}
+
+#mycheckbox2:checked~div {
+    height: 4.7rem;
+    padding: 0.3rem;
+}
+
+
+/* queue elements */
+
+.queue-elements-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.queue-element {
+    margin-bottom: 0.6rem;
+    width: 100%;
+    background-color: #1e222e98;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    cursor: pointer;
+}
+
+.song-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.queue-number {
+    font-size: 0.8rem;
+    color: #8092A1;
+    margin-right: 1rem;
+}
+
+.image-container {
+    position: relative;
+}
+
+.queue-song-img {
+    width: 3rem;
+    border-radius: 0.4rem;
+    margin-right: 1rem;
+}
+
+.queue-song-img~i {
+    transition: all 0.2s ease-in-out;
+}
+
+.queue-song-img~i:hover {
+    opacity: 0.9;
+    height: 1rem;
+}
+
+.queue-song-img:hover~i {
+    opacity: 0.9;
+    height: 1rem;
+}
+
+.play-btn {
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    color: white;
+    top: 1rem;
+    left: 1rem;
+}
+
+.queue-song-name {
+    font-size: 0.9rem;
+    color: #F6F7F9;
+}
+
+.queue-artist-name {
+    font-size: 0.9rem;
+    color: #8A909D;
+}
+
+.wishlist-icon {
+    color: #92A6B3;
+}
+
+.currently-on-song {
+    color: #21B6D9;
+    transform: rotate(-90deg);
+    margin-right: 0.9rem;
+}
+
+
+
+  

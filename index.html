@@ -12,44 +12,294 @@
     <script src="https://kit.fontawesome.com/2d9b67a497.js" crossorigin="anonymous"></script>
 </head>
 <!-- body -->
+
 <body>
-   <!-- top navigation bar -->
-   <nav class="navigation-bar">
-    <!--This div contains the logo and title of the page-->
-        <div class="website-logo">
-            <img src="logo.png">
-    </div>
-    <!-- this is the animated favourites text -->
-    <div class="favs">
-        <h4>
-            Favourites
-        </h4>
-    </div>
-    <!-- this is for search bar -->
-    <div class="search-bar">
-        <div>
-            <!-- magnifying glass- search icon -->
-            <i class="fas fa-search search-ico"></i>
+    <!-- top navigation bar -->
+    <nav class="navigation-bar">
+        <!--This div contains the logo and title of the page-->
+            <div class="website-logo">
+                <img src="logo.png">
         </div>
-        <input type="text" name="search" placeholder="Search">
-        <div>
-            <!-- mic icon -->
-            <i class="fas fa-microphone mic-ico"></i>
+        <!-- this is the animated favourites text -->
+        <div class="favs">
+            <h4>
+                Favourites
+            </h4>
         </div>
-    </div>
-    <!-- this is for notification bell -->
-    <div class="notification-bell">
-        <img src="bll.png">
+        <!-- this is for search bar -->
+        <div class="search-bar">
+            <div>
+                <!-- magnifying glass- search icon -->
+                <i class="fas fa-search search-ico"></i>
+            </div>
+            <input type="text" name="search" placeholder="Search">
+            <div>
+                <!-- mic icon -->
+                <i class="fas fa-microphone mic-ico"></i>
+            </div>
+        </div>
+        <!-- this is for notification bell -->
+        <div class="notification-bell">
+            <img src="bll.png">
 
-    </div>
-    <!-- this is for profile picture -->
-    <div class="profile-picture">
-        <img src="phn.png">
-    </div>
-</nav>
+        </div>
+        <!-- this is for profile picture -->
+        <div class="profile-picture">
+            <img src="phn.png">
+        </div>
+    </nav>
+    
+     <!-- this is the main center part of the page and it is divided into two sections, namely section 1 and section 2-->
+    <!-- I have separated these sections using the aside tag for each section -->
+    <section>
+         <!-- aside section 1 -->
+            <article class="carousel">
+                <div id="slider">
+                    <input type="radio" name="slider" id="s1" checked>
+                    <input type="radio" name="slider" id="s2">
+                    <input type="radio" name="slider" id="s3">
+                    <input type="radio" name="slider" id="s4">
+                    <input type="radio" name="slider" id="s5">
+            
+                    <label for="s1" id="slide1"><img src="img1.jpg" alt=""></label>
+                    <label for="s2" id="slide2"><img src="img2.jpg" alt=""></label>
+                    <label for="s3" id="slide3"><img src="img3.jpg" alt=""></label>
+                    <label for="s4" id="slide4"><img src="img11.png" alt=""></label>
+                    <label for="s5" id="slide5"><img src="img.jpg" alt=""></label>
+                </div>
+            </article>
+            <aside>
+                <!-- Queue inside aside -->
+                <div id="queue-1" class="queue-container">
+                    <div class="queue-header">
+                        <p>Queue</p>
+                        <div class="queue-btn-container">
 
-<!-- this is the main center part of the page and it is divided into two sections, namely section 1 and section 2-->
+                            <!-- here label is acting as a button for dropdown effect -->
+                            <label for="mycheckbox">Queue <span><i class="fas fa-angle-down"></i></span></label>
+                            <input type="checkbox" id="mycheckbox">
+                            <div class="queue-btn-dropdown">
+                                <a href="">Playlists</a>
+                                <hr>
+                                <a href="">Favourite Songs</a>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="queue-elements-container">
+                        <div class="queue-element">
+                            <div class="song-image-container">
+                                <p class="queue-number">01</p>
+                                <div class="image-container">
+                                    <img class="queue-song-img" src="mg1.jpg" />
+                                    <i class="fas play-btn fa-play"></i>
+                                </div>
+                                <div class="song-and-artist-container">
+                                    <p class="queue-song-name">More </p>
+                                    <p class="queue-artist-name">Doja Cat</p>
+                                </div>
+                            </div>
+
+                            <span class="nav-link">
+                                <button><i class="far wishlist-icon fa-heart"></i></button>
+                            </span>
+                        </div>
+                        <div class="queue-element">
+                            <div class="song-image-container">
+                                <i class="fas currently-on-song fa-stream"></i>
+                                
+                                <!-- <img src="assets/css/Free_Download_Cool_Audio_Reacting_Spectrum_After_Effects_CC.mp4"> -->
+                                <div class="image-container">
+
+                                    <img class="queue-song-img" src="mg2.jpg" />
+                                
+                                    <i class="fas play-btn fa-play"></i>
+                                </div>
+                                <div class="song-and-artist-container">
+                                    <p class="queue-song-name">Gaadi Kali</p>
+                                    <p class="queue-artist-name">Neha Kakkar</p>
+                                </div>
+                            </div>
+
+                            <span class="nav-link">
+                                <button><i class="far wishlist-icon fa-heart"></i></button>
+                            </span>
+                        </div>
+                        <div class="queue-element">
+                            <div class="song-image-container">
+                                <p class="queue-number">03</p>
+                                <div class="image-container">
+                                    <img class="queue-song-img" src="mg3.jfif" />
+                                    <i class="fas play-btn fa-play"></i>
+                                </div>
+                                <div class="song-and-artist-container">
+                                    <p class="queue-song-name">7 Rings</p>
+                                    <p class="queue-artist-name">Ariana Grande</p>
+                                </div>
+                            </div>
+
+                            <span class="nav-link">
+                                <button><i class="far wishlist-icon fa-heart"></i></button>
+                            </span>
+                        </div>
+                        <div class="queue-element">
+                            <div class="song-image-container">
+                                <p class="queue-number">04</p>
+                                <div class="image-container">
+                                    <img class="queue-song-img" src="mg4.jfif" />
+                                    <i class="fas play-btn fa-play"></i>
+                                </div>
+                                <div class="song-and-artist-container">
+                                    <p class="queue-song-name">Chand Chhupa badal me </p>
+                                    <p class="queue-artist-name">Udit Narayan</p>
+                                </div>
+                            </div>
+
+                            <span class="nav-link">
+                                <button><i class="far wishlist-icon fa-heart"></i></button>
+                            </span>
+                        </div>
+                        <div class="queue-element">
+                            <div class="song-image-container">
+                                <p class="queue-number">05</p>
+                                <div class="image-container">
+                                    <img class="queue-song-img" src="mg5.jpg" />
+                                    <i class="fas play-btn fa-play"></i>
+                                </div>
+                                <div class="song-and-artist-container">
+                                    <p class="queue-song-name">Slowly Slowly</p>
+                                    <p class="queue-artist-name">Guru Randhawa</p>
+                                </div>
+                            </div>
+
+                            <span class="nav-link">
+                                <button><i class="far wishlist-icon fa-heart"></i></button>
+                            </span>
+                        </div>
+                        <div class="queue-element">
+                            <div class="song-image-container">
+                                <p class="queue-number">06</p>
+                                <div class="image-container">
+                                    <img class="queue-song-img" src="mg6.jpg" />
+                                    <i class="fas play-btn fa-play"></i>
+                                </div>
+                                <div class="song-and-artist-container">
+                                    <p class="queue-song-name">Raataan Lambiyan </p>
+                                    <p class="queue-artist-name">Jubin Nautiyal</p>
+                                </div>
+                            </div>
+
+                            <span class="nav-link">
+                                <button><i class="far wishlist-icon fa-heart"></i></button>
+                            </span>
+                        </div>
+                        <div class="queue-element">
+                            <div class="song-image-container">
+                                <p class="queue-number">07</p>
+                                <div class="image-container">
+                                    <img class="queue-song-img" src="mg7.jpg" />
+                                    <i class="fas play-btn fa-play"></i>
+                                </div>
+                                <div class="song-and-artist-container">
+                                    <p class="queue-song-name">zindagi ki raho mai</p>
+                                    <p class="queue-artist-name">Sonu Nigam</p>
+                                </div>
+                            </div>
+
+                            <span class="nav-link">
+                                <button><i class="far wishlist-icon fa-heart"></i></button>
+                            </span>
+                        </div>
+                        <div class="queue-element">
+                            <div class="song-image-container">
+                                <p class="queue-number">08</p>
+                                <div class="image-container">
+                                    <img class="queue-song-img" src="mg8.jpg" />
+                                    <i class="fas play-btn fa-play"></i>
+                                </div>
+                                <div class="song-and-artist-container">
+                                    <p class="queue-song-name">We're Good</p>
+                                    <p class="queue-artist-name">Dua Lipa</p>
+                                </div>
+                            </div>
+
+                            <span class="nav-link">
+                                <button><i class="far wishlist-icon fa-heart"></i></button>
+                            </span>
+                        </div>
+                        <div class="queue-element">
+                            <div class="song-image-container">
+                                <p class="queue-number">09</p>
+                                <div class="image-container">
+                                    <img class="queue-song-img" src="mg9.jpg" />
+                                    <i class="fas play-btn fa-play"></i>
+                                </div>
+                                <div class="song-and-artist-container">
+                                    <p class="queue-song-name">Jalak Dikhla za</p>
+                                    <p class="queue-artist-name">Himesh Reshmiya</p>
+                                </div>
+                            </div>
+
+                            <span class="nav-link">
+                                <button><i class="far wishlist-icon fa-heart"></i></button>
+                            </span>
+                        </div>
+                        <div class="queue-element">
+                            <div class="song-image-container">
+                                <p class="queue-number">10</p>
+                                <div class="image-container">
+                                    <img class="queue-song-img" src="mg10.jpg" />
+                                    <i class="fas play-btn fa-play"></i>
+                                </div>
+                                <div class="song-and-artist-container">
+                                    <p class="queue-song-name">Yaar Ka satya hua hu</p>
+                                    <p class="queue-artist-name">B Praak</p>
+                                </div>
+                            </div>
+
+                            <span class="nav-link">
+                                <button><i class="far wishlist-icon fa-heart"></i></button>
+                            </span>
+                        </div>
+                        <div class="queue-element">
+                            <div class="song-image-container">
+                                <p class="queue-number">11</p>
+                                <div class="image-container">
+                                    <img class="queue-song-img" src="mg11.jpg" />
+                                    <i class="fas play-btn fa-play"></i>
+                                </div>
+                                <div class="song-and-artist-container">
+                                    <p class="queue-song-name">Kinna Sona tanu </p>
+                                    <p class="queue-artist-name">Ammy virk </p>
+                                </div>
+                            </div>
+
+                            <span class="nav-link">
+                                <button><i class="far wishlist-icon fa-heart"></i></button>
+                            </span>
+                        </div>
+                        <div class="queue-element">
+                            <div class="song-image-container">
+                                <p class="queue-number">12</p>
+                                <div class="image-container">
+                                    <img class="queue-song-img" src="mg1.jpg" />
+                                    <i class="fas play-btn fa-play"></i>
+                                </div>
+                                <div class="song-and-artist-container">
+                                    <p class="queue-song-name">Starboy</p>
+                                    <p class="queue-artist-name">The Weeknd</p>
+                                </div>
+                            </div>
+
+                            <span class="nav-link">
+                                <button><i class="far wishlist-icon fa-heart"></i></button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </aside>
+    </section>
 </body>
 
 </html>
